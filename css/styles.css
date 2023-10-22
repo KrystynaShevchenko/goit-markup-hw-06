@@ -40,9 +40,9 @@ address {
 }
 
 .container {
-  width: 1158px;
-  padding-right: 15px;
-  padding-left: 15px;
+  width: 320px;
+  padding-right: 16px;
+  padding-left: 16px;
   margin: 0 auto;
   /* outline: 2px solid red; */
 }
@@ -163,7 +163,7 @@ address {
 
 /* ============================================== */
 
-/* ===================FIRST SECTION============== */
+/* ===================FIRST SECTION HERO============== */
 
 .hero {
   background-color: #2e2f42;
@@ -880,4 +880,25 @@ address {
   margin-bottom: 24px;
   margin-left: 95px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==================MEDIA=================== */
+
+@media screen and (min-width: 320px) {
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+    width: 1158px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
 }
