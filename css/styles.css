@@ -166,9 +166,9 @@ address {
 /* ===================FIRST SECTION HERO============== */
 
 .hero {
+  padding-top: 72px;
+  padding-bottom: 72px;
   background-color: #2e2f42;
-  padding-top: 188px;
-  padding-bottom: 188px;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
@@ -177,27 +177,28 @@ address {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  max-width: 1440px;
+  max-width: 320px;
   margin: auto;
 }
 .hero-title {
-  color: var(--WHITE, #fff);
+  max-width: 200px;
   text-align: center;
-  font-size: 56px;
+  color: #fff;
+  font-size: 36px;
   font-weight: 700;
-  line-height: 1.07;
+  line-height: 1.11;
   letter-spacing: 0.02em;
-  max-width: 496px;
+  text-transform: capitalize;
   margin: 0 auto;
-  margin-bottom: 48px;
+  margin-bottom: 72px;
 }
 .hero-btn {
   color: #fff;
   font-family: inherit;
   font-size: 16px;
   font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.64px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
   cursor: pointer;
   background-color: #4d5ae5;
   display: block;
@@ -215,9 +216,9 @@ address {
   background-color: #404bbf;
 }
 
-/* ============================================== */
+/* ======================================================= */
 
-/* ==================SECOND SECTION============== */
+/* ==================SECOND SECTION FEATURES============== */
 
 .features {
   padding-top: 96px;
@@ -279,8 +280,10 @@ address {
 
 .team {
   background-color: #f4f4fd;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+  /* padding-top: 120px;
+  padding-bottom: 120px; */
 }
 .team-title {
   color: #2e2f42;
@@ -890,6 +893,29 @@ address {
     padding-left: 16px;
   }
 
+  /* ====768px===============FIRST SECTION HERO============== */
+
+  .hero {
+    padding-top: 112px;
+    padding-bottom: 112px;
+    max-width: 768px;
+  }
+  .hero-title {
+    max-width: 496px;
+    margin-bottom: 36px;
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    text-transform: none;
+  }
+
+  .hero-btn {
+  }
+
+  /* ======768px============================================= */
+
+  /* ==========768px=========SECOND SECTION FEATURES========= */
+
   .features-menu-list {
     column-gap: 24px;
   }
@@ -899,12 +925,39 @@ address {
   }
 }
 
+/* =======768px=========================================== */
+/* =======768px=======THIRD SECTION======================= */
+
+/* =======768px=========================================== */
+
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
     padding-right: 15px;
     padding-left: 15px;
   }
+
+  /* ===1158px===============FIRST SECTION HERO============== */
+
+  .hero {
+    padding-top: 188px;
+    padding-bottom: 188px;
+    max-width: 1440px;
+  }
+  .hero-title {
+    font-size: 56px;
+    line-height: 1.07;
+    max-width: 496px;
+    margin-bottom: 48px;
+    text-transform: none;
+  }
+
+  .hero-btn {
+  }
+
+  /* =====1158px============================================= */
+
+  /* =======1158px===========SECOND SECTION FEATURES======== */
 
   .features {
     padding-top: 120px;
@@ -942,3 +995,5 @@ address {
     font-weight: 400;
   }
 }
+
+/* =====1158px=============================================== */
