@@ -47,7 +47,7 @@ address {
   padding-right: 16px;
   padding-left: 16px;
   margin: 0 auto;
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
 }
 
 /* ====================HEADER======================== */
@@ -481,11 +481,14 @@ address {
 
 .footer .container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 72px;
   align-items: baseline;
 }
 
 .div-logo {
-  margin-right: 120px;
+  text-align: center;
 }
 
 .footer-logo {
@@ -493,10 +496,10 @@ address {
   color: #4d5ae5;
   font-size: 18px;
   font-weight: 700;
-  line-height: 1.17; /* 116.667% */
+  line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-bottom: 16px;
+  margin-bottom: 17px;
   display: inline-block;
 }
 .footer-logo-span {
@@ -504,7 +507,7 @@ address {
   color: #f4f4fd;
   font-size: 18px;
   font-weight: 700;
-  line-height: 1.16; /* 116.667% */
+  line-height: 1.16;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 17.5px;
@@ -523,8 +526,9 @@ address {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #ffffff;
-  margin-bottom: 16px;
-  margin-right: 80px;
+  /* margin-bottom: 16px;
+  margin-right: 80px; */
+  text-align: center;
 }
 
 .footer-text-social {
@@ -539,7 +543,6 @@ address {
 .footer-menu-icons {
   display: flex;
   gap: 16px;
-  list-style: none;
 }
 .footer-list-icons {
   width: 40px;
@@ -570,6 +573,7 @@ address {
 .footer-right {
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 .footer-right-text {
@@ -583,6 +587,8 @@ address {
 
 .footer-right-form {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   gap: 24px;
 }
@@ -597,7 +603,7 @@ address {
   line-height: 1.5;
   letter-spacing: 0.04em;
   background-color: #2e2f42;
-  width: 264px;
+  width: 288px;
   height: 40px;
   background-color: transparent;
   border-radius: 4px;
@@ -962,14 +968,31 @@ address {
 
   /*? ======768px============FOOTER========================== */
 
+  .footer .container {
+    justify-content: initial;
+    column-gap: 24px;
+    row-gap: 72px;
+    padding-left: 92px;
+  }
+
+  .div-logo {
+    text-align: left;
+  }
+
+  .footer-container-social {
+    text-align: left;
+  }
+
+  .footer-right {
+    text-align: left;
+  }
   /*? =======768px=========================================== */
 }
 
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding: 0 15px;
   }
 
   /* ===1158px===============FIRST SECTION HERO============== */
@@ -1069,5 +1092,29 @@ address {
     padding: 100px 0;
   }
 
+  .footer .container {
+    column-gap: 0;
+    row-gap: 0;
+    padding-left: 15px;
+    flex-wrap: nowrap;
+  }
+
+  .div-logo {
+    margin-right: 120px;
+  }
+
+  .footer-logo {
+    margin-bottom: 16px;
+  }
+
+  .footer-container-social {
+    margin-bottom: 16px;
+    margin-right: 80px;
+  }
+
+  .footer-right {
+    flex-direction: initial;
+    flex-wrap: wrap;
+  }
   /* ======1158px=========================================== */
 }
