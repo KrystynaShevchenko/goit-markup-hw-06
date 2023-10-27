@@ -53,8 +53,7 @@ address {
 /* ====================HEADER======================== */
 
 .header {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding: 16px 0;
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
@@ -96,8 +95,7 @@ address {
 }
 
 .header-menu-list {
-  display: flex;
-  gap: 40px;
+  display: none;
 }
 
 .header-menu-item {
@@ -143,8 +141,9 @@ address {
 }
 
 .address-menu-list {
-  display: flex;
-  gap: 40px;
+  display: none;
+  /* display: flex;
+  gap: 40px; */
 }
 
 .addres-menu-item {
@@ -162,6 +161,157 @@ address {
 .address-menu-link:hover,
 .address-menu-link:focus {
   color: #404bbf;
+}
+
+.menu-open-btn {
+  background-color: transparent;
+  width: 24px;
+  height: 24px;
+  padding: 16px 0;
+  margin-left: auto;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/*==================MOB-MENU===============*/
+
+.menu-open-icon {
+}
+
+.menu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu-close-btn {
+  width: 24px;
+  height: 24px;
+  background-color: #e7e9fc;
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-close-btn {
+}
+
+.menu-close-btn:hover,
+.menu-close-btn:focus {
+  background-color: #404bbf;
+  border: none;
+}
+
+.mob-close-icon {
+  fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mob-menu {
+}
+.mob-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 72px;
+  margin-bottom: 168px;
+}
+.mob-menu-item {
+}
+.mob-menu-link {
+  color: #2e2f42;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.11;
+  text-transform: capitalize;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mob-menu-link:hover,
+.mob-menu-link:focus {
+  color: #404bbf;
+  background-color: transparent;
+}
+
+.studio {
+}
+.mob-address-list {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mob-address-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+.mob-addres-menu-item {
+}
+.mob-address-menu-link {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mob-address-menu-link:hover,
+.mob-address-menu-link:focus {
+  color: #4d5ae5;
+  background-color: transparent;
+}
+.mob-menu-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.mob-list-icons {
+  width: 40px;
+  height: 40px;
+}
+.mob-link-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4d5ae5;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mob-link-icons:hover,
+.mob-link-icons:focus {
+  background-color: #404bbf;
+}
+.mob-icons {
+  fill: #f4f4fd;
 }
 
 /* ============================================== */
@@ -687,8 +837,8 @@ address {
 }
 
 .modal {
-  width: 408px;
-  min-height: 584px;
+  width: 288px;
+  min-height: 623px;
   background-color: #fcfcfc;
   border-radius: 4px;
   position: absolute;
@@ -714,7 +864,6 @@ address {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -895,9 +1044,9 @@ address {
   padding: 16px 32px;
   cursor: pointer;
   border: none;
-  margin-top: 24px;
+  /* margin-top: 24px;
   margin-bottom: 24px;
-  margin-left: 95px;
+  margin-left: 95px; */
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -910,6 +1059,35 @@ address {
   .container {
     max-width: 768px;
   }
+
+  /*? =======1158px=============HEADER======================== */
+
+  .header {
+    padding: 24px 0;
+  }
+
+  .header-menu-list {
+    display: flex;
+    gap: 40px;
+  }
+
+  .address-menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .address-menu-link {
+    font-size: 12px;
+    line-height: 1.17px;
+    letter-spacing: 0.04em;
+  }
+
+  .menu-open-btn {
+    display: none;
+  }
+
+  /*? ======768px============================================= */
 
   /*? ====768px===============FIRST SECTION HERO============== */
 
@@ -1018,6 +1196,16 @@ address {
     text-align: left;
   }
   /*? =======768px=========================================== */
+
+  /*? =======768px==========BACKDROP========================= */
+
+  .modal {
+    width: 408px;
+    min-height: 584px;
+    padding: 72px 24px 24px 24px;
+  }
+
+  /*? =======768px=========================================== */
 }
 
 @media screen and (min-width: 1158px) {
@@ -1025,6 +1213,31 @@ address {
     max-width: 1158px;
     padding: 0 15px;
   }
+
+  /* ======1158px==============HEADER======================== */
+
+  .header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .header-menu-list {
+    display: flex;
+    gap: 40px;
+  }
+  .address-menu-list {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .address-menu-link {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+
+  /* =====1158px============================================= */
 
   /* ===1158px===============FIRST SECTION HERO============== */
 
@@ -1165,5 +1378,14 @@ address {
     flex-direction: initial;
     flex-wrap: wrap;
   }
+  /* ======1158px=========================================== */
+
+  /* ======1158px==========BACKDROP========================= */
+
+  .modal {
+    width: 408px;
+    min-height: 584px;
+  }
+
   /* ======1158px=========================================== */
 }
