@@ -53,7 +53,7 @@ address {
 /* ====================HEADER======================== */
 
 .header {
-  padding: 16px 0;
+  /* padding: 16px 0; */
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
@@ -62,12 +62,11 @@ address {
 .header-container {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .header-navigation {
-  display: flex;
-  align-items: center;
-  margin-right: auto;
+  padding: 17.5px 0;
   /* flex-grow: 1;
   justify-content: space-between; */
 }
@@ -89,7 +88,7 @@ address {
   font-family: Raleway;
   font-size: 18px;
   font-weight: 700;
-  line-height: 1.17;
+  line-height: 1.17px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
@@ -107,8 +106,7 @@ address {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding: 16px 0;
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -374,6 +372,7 @@ address {
   padding: 16px 32px;
   border-radius: 4px;
   margin: 0 auto;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -445,7 +444,7 @@ address {
 
 .team {
   background-color: #f4f4fd;
-  padding: 96px 12px;
+  padding: 96px 0;
 }
 .team-title {
   color: #2e2f42;
@@ -651,7 +650,7 @@ address {
 }
 
 .div-logo {
-  text-align: center;
+  text-align: left;
 }
 
 .footer-logo {
@@ -663,7 +662,9 @@ address {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 17px;
-  display: inline-block;
+  display: block;
+  text-align: center;
+  /* display: inline-block; */
 }
 .footer-logo-span {
   font-family: "Raleway", sans-serif;
@@ -1063,12 +1064,27 @@ address {
   /*? =======1158px=============HEADER======================== */
 
   .header {
-    padding: 24px 0;
+    padding: 16px 0;
+  }
+
+  .header-navigation {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    padding: 0;
+  }
+
+  .header-logo {
+    margin-right: 120px;
   }
 
   .header-menu-list {
     display: flex;
     gap: 40px;
+  }
+
+  .header-menu-link {
+    padding: 24px 0;
   }
 
   .address-menu-list {
@@ -1146,18 +1162,17 @@ address {
   /*? =======768px=======THIRD SECTION======================= */
 
   .team {
-    padding: 96px 92px;
-    /* padding-right: 92px;
-    padding-left: 92px; */
+    padding: 96px 0;
   }
 
   .team-menu-list {
     gap: 24px;
     row-gap: 64px;
+    justify-content: center;
   }
 
   .team-menu-item {
-    width: calc((100% - 24px) / 2);
+    width: 264px;
   }
 
   /*? =======768px=========================================== */
@@ -1181,10 +1196,11 @@ address {
     justify-content: initial;
     column-gap: 24px;
     row-gap: 72px;
-    padding-left: 92px;
+    max-width: 550px;
+    /* padding-left: 92px; */
   }
 
-  .div-logo {
+  .footer-logo {
     text-align: left;
   }
 
@@ -1217,8 +1233,7 @@ address {
   /* ======1158px==============HEADER======================== */
 
   .header {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding: 24px 0;
   }
 
   .header-menu-list {
@@ -1273,6 +1288,10 @@ address {
   }
 
   .hero-btn {
+  }
+
+  .header-menu-link {
+    padding-bottom: 24px;
   }
 
   /* =====1158px============================================= */
@@ -1359,6 +1378,7 @@ address {
     row-gap: 0;
     padding-left: 15px;
     flex-wrap: nowrap;
+    max-width: none;
   }
 
   .div-logo {
